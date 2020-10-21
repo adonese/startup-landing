@@ -4,6 +4,9 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Logo from './partials/Logo';
 
+import { useTranslation } from 'react-i18next';
+
+
 const propTypes = {
   navPosition: PropTypes.string,
   hideNav: PropTypes.bool,
@@ -74,12 +77,28 @@ const Header = ({
     className
   );
 
+  const { t, i18n } = useTranslation();
+
+  const [siteLang, setSiteLang] = useState(false);
+
+  const changeLang = ()=>{
+    setSiteLang(!siteLang)
+    if (siteLang){
+      i18n.changeLanguage("ar");
+    }else{
+      i18n.changeLanguage("en");
+    }
+    
+  }
+
   return (
+
     <header
       {...props}
       className={classes}
     >
       <div className="container">
+       
         <div className={
           classNames(
             'site-header-inner',
@@ -98,6 +117,8 @@ const Header = ({
                   <span className="hamburger-inner"></span>
                 </span>
               </button>
+
+
               <nav
                 ref={nav}
                 className={
@@ -112,7 +133,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
+                      <Link to="#0" onClick={changeLang}>En/عربي</Link>
                     </li>
                   </ul>
                   {!hideSignin &&
@@ -120,7 +141,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
+                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>{t("sign_up")}</Link>
                       </li>
                     </ul>}
                 </div>
