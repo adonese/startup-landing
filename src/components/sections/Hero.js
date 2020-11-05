@@ -6,6 +6,7 @@ import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 
+import { useTranslation } from 'react-i18next';
 const propTypes = {
   ...SectionProps.types
 }
@@ -26,6 +27,9 @@ const Hero = ({
 }) => {
 
   const [videoModalActive, setVideomodalactive] = useState(false);
+  const { t, i18n } = useTranslation();
+  
+
 
   const openModal = (e) => {
     e.preventDefault();
@@ -61,19 +65,19 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Landing template for <span className="text-color-primary">startups</span>
+              {t("title")} <span className="text-color-primary">{t("slogan")}</span>
             </h1>
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.
-                </p>
+                {t("hero_text")}                </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-                  <Button tag="a" color="primary" wideMobile href="https://cruip.com/">
-                    Get started
+             
+                  <Button tag="a" color="primary" wideMobile href="#">
+                    {t("download_android")}
                     </Button>
-                  <Button tag="a" color="dark" wideMobile href="https://github.com/cruip/open-react-template/">
-                    View on Github
+                    <Button tag="a" color="dark" wideMobile href="#">
+                    {t("download_ios")}
                     </Button>
                 </ButtonGroup>
               </div>
@@ -98,7 +102,7 @@ const Hero = ({
             id="video-modal"
             show={videoModalActive}
             handleClose={closeModal}
-            video="https://player.vimeo.com/video/174002812"
+            video="https://vimeo.com/470214727"
             videoTag="iframe" />
         </div>
       </div>

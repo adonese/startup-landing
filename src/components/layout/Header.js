@@ -4,6 +4,9 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import Logo from './partials/Logo';
 
+import { useTranslation } from 'react-i18next';
+
+
 const propTypes = {
   navPosition: PropTypes.string,
   hideNav: PropTypes.bool,
@@ -74,12 +77,17 @@ const Header = ({
     className
   );
 
+  const { t, i18n } = useTranslation();
+
+
   return (
+
     <header
       {...props}
       className={classes}
     >
       <div className="container">
+       
         <div className={
           classNames(
             'site-header-inner',
