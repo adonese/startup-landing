@@ -79,6 +79,20 @@ const Header = ({
 
   const { t, i18n } = useTranslation();
 
+<<<<<<< HEAD
+=======
+  const [siteLang, setSiteLang] = useState(false);
+
+  const changeLang = ()=>{
+    setSiteLang(!siteLang)
+    if (siteLang){
+      i18n.changeLanguage("ar");
+    }else{
+      i18n.changeLanguage("en");
+    }
+    
+  }
+>>>>>>> 8019b63e7f0709107f9e32a1bf53a5e0b584645b
 
   return (
 
@@ -106,6 +120,8 @@ const Header = ({
                   <span className="hamburger-inner"></span>
                 </span>
               </button>
+
+
               <nav
                 ref={nav}
                 className={
@@ -120,7 +136,7 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                     <li>
-                      <Link to="#0" onClick={closeMenu}>Documentation</Link>
+                      <Link to="#0" onClick={changeLang}>En/عربي</Link>
                     </li>
                   </ul>
                   {!hideSignin &&
@@ -128,7 +144,7 @@ const Header = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Sign up</Link>
+                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>{t("sign_up")}</Link>
                       </li>
                     </ul>}
                 </div>
