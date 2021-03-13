@@ -32,6 +32,7 @@ i18n.use(LanguageDetector).init({
                     workflow_title: "How Search Me Works",
                     workflow_desc: "For users, you simply register in our system, select a service you wish and submit your request. We offer you a curated list of our top service providers and you are free to call them, text them, or whatsapp them!",
                     highlighted_features: "1",
+                    HIGHLIGHTED_FEATURES: "1",
                     sidefeatures_1: "Create a new Account",
                     sidefeatures_1_desc: "Mobile number, name, and Password. That all we want!",
                     sidefeatures_2: "Choose your problem",
@@ -59,7 +60,7 @@ i18n.use(LanguageDetector).init({
                 download_ios: "قم بتحميل تطبيق iOS",
                 download_android: "قم بتحميل تطبيق Android",
                 company_values: "ابحث لي هو منصة بسيطة وسهلة الاستخدام لتوفير الخدمات اليومية والجمع بين مزودي الخدمات والمستفيدين",
-                company_values_desc: "باستخدام تطبيقاتنا المتوفرة في المتاجر المختلفة، يمكنك الحصول على أقرب وأفضل العملاء لحل مشكلتك المعينة.",
+                company_values_desc: "باستخدام ابحث لي المتوفر في المتاجر المختلفة، يمكنك الحصول على أقرب وأفضل العملاء لحل مشكلتك المعينة.",
                 ele: "كهرباء",
                 ele_desc: "ابحث لي يساعدك على إيجاد أقرب كهربائي إليك",
                 sink: "مشاكل المطبخ",
@@ -88,6 +89,7 @@ i18n.use(LanguageDetector).init({
                 customer_voices_en2: "فكرة انك تختار مشكلتك ثم تجد أقرب مزودي الخدمة الموثوقين بكامل عناوين التواصل لهم مفيدة للغاية وفعلاً تطبيق يفيدني في أيامي العادية",
                 customer2_name: "محمد يوسف",
                 customer2_company: "سولس",
+                HIGHLIGHTED_FEATURES: "1",
             }
         },
 

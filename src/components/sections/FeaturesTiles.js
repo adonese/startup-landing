@@ -79,32 +79,35 @@ const FeaturesTiles = ({
                     {t("ele")}
                     </h4>
                   <p className="m-0 text-sm">
-{t("ele_desc")}                    </p>
+                        {t("ele_desc")}                    
+                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
+
+            <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={require('./../../assets/images/sink.svg')}
-                      alt="Features tile icon 02"
+                      src={require('./../../assets/images/disinfectant.svg')}
+                      alt="Features tile icon 06"
                       width={64}
                       height={64} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                    {t("sink")}
+                  {t("batteries")}
                     </h4>
                   <p className="m-0 text-sm">
-                  {t("sink_desc")}                    </p>
+                  {t("batteries_desc")}                    </p>
                 </div>
               </div>
             </div>
 
+          
             <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
@@ -152,7 +155,7 @@ const FeaturesTiles = ({
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={require('./../../assets/images/car_fix.svg')}
+                      src={require('./../../assets/images/ac.svg')}
                       alt="Features tile icon 05"
                       width={64}
                       height={64} />
@@ -168,26 +171,31 @@ const FeaturesTiles = ({
               </div>
             </div>
 
-            <div className="tiles-item reveal-from-bottom" data-reveal-delay="400">
+           {/* put me here */}
+           <div className="tiles-item reveal-from-bottom" data-reveal-delay="200">
               <div className="tiles-item-inner">
                 <div className="features-tiles-item-header">
                   <div className="features-tiles-item-image mb-16">
                     <Image
-                      src={require('./../../assets/images/batteries.svg')}
-                      alt="Features tile icon 06"
+                      src={require('./../../assets/images/sink.svg')}
+                      alt="Features tile icon 02"
                       width={64}
                       height={64} />
                   </div>
                 </div>
                 <div className="features-tiles-item-content">
                   <h4 className="mt-0 mb-8">
-                  {t("batteries")}
+                    {t("sink")}
                     </h4>
                   <p className="m-0 text-sm">
-                  {t("batteries_desc")}                    </p>
+                  {t("sink_desc")}                    
+                  </p>
                 </div>
               </div>
             </div>
+
+
+
 
           </div>
         </div>

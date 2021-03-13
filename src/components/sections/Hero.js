@@ -72,13 +72,13 @@ const Hero = ({
                 {t("hero_text")}                </p>
               <div className="reveal-from-bottom" data-reveal-delay="600">
                 <ButtonGroup>
-             
-                  <Button tag="a" color="primary" wideMobile href="#">
-                    {t("download_android")}
-                    </Button>
-                    <Button tag="a" color="dark" wideMobile href="#">
+                <Button tag="a" color="dark" wideMobile href="https://apps.apple.com/app/id1533710209">
                     {t("download_ios")}
                     </Button>
+                  <Button tag="a" color="primary" wideMobile href="https://play.google.com/store/apps/details?id=com.soluspay.ondemand">
+                    {t("download_android")}
+                    </Button>
+
                 </ButtonGroup>
               </div>
             </div>
